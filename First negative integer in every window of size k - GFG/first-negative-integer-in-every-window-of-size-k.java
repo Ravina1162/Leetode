@@ -59,8 +59,8 @@ class Compute {
             {
                 if(de.size()>0){
                 a[i]=de.getFirst();
-                long num=A[i];
-                if(num==de.getFirst())
+                 long num=A[i];
+                 if(num==de.getFirst())
                 de.pollFirst();
                }
                else
