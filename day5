@@ -1,0 +1,35 @@
+QUESTION: Valid Perfect Square
+
+Given a positive integer num, write a function which returns True if num is a perfect square else False.
+
+CODE:
+
+class Solution {
+    public boolean isPerfectSquare(int num) {
+         long lb=1,ub=num;
+    while(lb<=ub){
+        long mid=lb+(ub-lb)/2;
+        if(mid*mid==num) return true;
+    else if(mid*mid>num)
+        ub=mid-1;
+    else
+         lb=mid+1;
+    }
+   return false;
+    }
+}
+
+INPUT FORMAT:
+
+Input: num = 16
+Output: true
+
+Example 1:
+
+Input: num = 14
+Output: false
+ 
+
+Constraints:
+
+1 <= num <= 2^31 - 1
