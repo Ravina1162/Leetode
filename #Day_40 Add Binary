@@ -1,0 +1,32 @@
+QUESTION: Add Binary
+Given two binary strings a and b, return their sum as a binary string.
+
+ ANSWER:
+ 
+
+INPUT FORMAT:
+
+Input: a = "11", b = "1"
+Output: "100"
+/**
+ * @param {string} a
+ * @param {string} b
+ * @return {string}
+ */
+var addBinary = function(a, b) {
+    var n1=`0b${a}`;
+    var n2=`0b${b}`;
+    var sum = BigInt(n1)+BigInt(n2);
+    return sum.toString(2);
+};
+Example 1
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+ 
+
+Constraints:
+
+1 <= a.length, b.length <= 104
+a and b consist only of '0' or '1' characters.
+Each string does not contain leading zeros except for the zero itself.
